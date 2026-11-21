@@ -22,7 +22,7 @@ theorem riemann_hypothesis_bare_kernel {α : Type} (S : CriticalStripState α) (
     S.mul j (S.inv j) = S.sigma := by
   rw [S.jerk_inversion j, S.equilibrium_lock]
 
-/-- Axiom audit: Confirms zero dependency on Classical.choice or Mathlib -/
+-- Axiom audit: Confirms zero dependency on Classical.choice or Mathlib
 #print axioms riemann_hypothesis_bare_kernel
 
 end ToneFramework
