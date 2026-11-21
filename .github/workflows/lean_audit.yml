@@ -8,5 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build and Verify Bare Lean 4 Kernel
+      - name: Setup Lean 4
         uses: leanprover/lean-action@v1
+        with:
+          build: false
+
+      - name: Verify Bare Lean 4 Kernel
+        run: lean Framework_RH.lean
