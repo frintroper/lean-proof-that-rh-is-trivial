@@ -1,4 +1,4 @@
-name: Lean 4 Riemann Verification
+name: Lean 4 & Jerk-SAT Verification
 
 on: [push, pull_request]
 
@@ -15,3 +15,6 @@ jobs:
 
       - name: Verify Bare Lean 4 Kernel
         run: lean Framework_RH.lean
+
+      - name: Verify Jerk-SAT Continuous Relaxation Solver
+        run: python3 test_jerk_sat.py
