@@ -8,10 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Lean 4 (elan)
-        run: |
-          curl https://githubusercontent.com -sSf | sh -s -- -y --default-toolchain leanprover/lean4:stable
-          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+      - name: Setup Lean 4
+        uses: leanprover/lean-action@v1
+        with:
+          build: false
 
       - name: Execute Lean 4 Kernel Validation
         run: lean Framework_RH.lean
