@@ -1,0 +1,6 @@
+name = "riemann_bare_kernel"
+version = "0.1.0"
+defaultTargets = ["Framework_RH"]
+
+[[lean_lib]]
+name = "Framework_RH"
